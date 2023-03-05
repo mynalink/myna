@@ -1,0 +1,6 @@
+server.host: "0"
+server.shutdownTimeout: "5s"
+server.rewriteBasePath: true
+server.basePath: "/kibana"
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+monitoring.ui.container.elasticsearch.enabled: true

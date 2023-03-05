@@ -1,0 +1,12 @@
+cluster.name: es.piper
+network.host: 0.0.0.0
+node.name: "node-1"
+discovery.seed_hosts: ["127.0.0.1", "[::1]"]
+cluster.initial_master_nodes: ["node-1"]
+http.cors.enabled: true
+http.cors.allow-origin: /.*/
+http.cors.allow-methods: OPTIONS,HEAD,GET,POST,PUT,DELETE
+http.cors.allow-headers: Authorization,X-Requested-With,X-Auth-Token,Content-Type,Content-Length
+http.cors.allow-credentials: true
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true

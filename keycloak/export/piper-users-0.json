@@ -1,0 +1,65 @@
+{
+  "realm" : "piper",
+  "users" : [ {
+    "id" : "d4fe9e40-7d81-477d-bc01-3c2561a40064",
+    "createdTimestamp" : 1670186995394,
+    "username" : "admin",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "",
+    "lastName" : "",
+    "credentials" : [ {
+      "id" : "3cad493b-603f-4737-b371-e65a3132f059",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1670187009632,
+      "secretData" : "{\"value\":\"jS7MoAyohVmYimibfOqPtMi4XJYW26pCwjVNYPdEGTlvjTULDUz4fZYj9Elc8rqFCtY/Gjd0xbuHigIG26TMGw==\",\"salt\":\"rby+VmnpnoiW+I7dqzC/jg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "piper.admin", "piper.user", "default-roles-piper" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "f18227be-ba7c-4bd6-b851-f5a95968851a",
+    "createdTimestamp" : 1670164184865,
+    "username" : "demo",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "",
+    "lastName" : "",
+    "credentials" : [ {
+      "id" : "85686973-c59d-4d43-9852-9397d7fc8aeb",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1670164216401,
+      "secretData" : "{\"value\":\"EW8oAZQ5HnTzhfGDQ038E6FaH6sTxqh4WIFHW/HsBeLqNqVtgKCnmJZeUUooI38KnZx8cmeIwE2cc5nSR8ckVw==\",\"salt\":\"IjPQeSav6eHg+LXhOz+F4g==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "piper.user", "default-roles-piper" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "de991d4d-a307-4fa8-8512-96e68df7213d",
+    "createdTimestamp" : 1670162555570,
+    "username" : "service-account-piper",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "piper",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-piper" ],
+    "clientRoles" : {
+      "piper" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
