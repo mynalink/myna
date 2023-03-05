@@ -14,7 +14,7 @@ cd piper-deploy && chmod a+x ./single-node-install.sh
 
 # Usage
 * Access in browser ```http://${your-vm-ip}```
-* [User Manual](-/wikis/用户手册)
+* [User Manual](../../wikis/用户手册)
 
 # Update
 ```shell
