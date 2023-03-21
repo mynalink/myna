@@ -61,9 +61,9 @@ echo "Update docker registry"
 ##3##
 mkdir -p /etc/docker
 # echo '{}' > /etc/docker/daemon.json
-# bash -c 'cat <<< $(jq ".\"registry-mirrors\" = [\"https://nlp.ink:233\"]" /etc/docker/daemon.json) > /etc/docker/daemon.json'
+# bash -c 'cat <<< $(jq ".\"registry-mirrors\" = [\"https://poda.cc:543\"]" /etc/docker/daemon.json) > /etc/docker/daemon.json'
 # https://menetray.com/en/blog/how-reduce-size-log-files-docker-containers
-echo '{"registry-mirrors":["https://nlp.ink:233"],"log-driver": "json-file", "log-opts": {"max-size": "100m", "max-file": "3"}}' | jq . > /etc/docker/daemon.json
+echo '{"registry-mirrors":["https://poda.cc:543"],"log-driver": "json-file", "log-opts": {"max-size": "100m", "max-file": "3"}}' | jq . > /etc/docker/daemon.json
 systemctl restart docker
 
 docker pull piper/chrome:v1
