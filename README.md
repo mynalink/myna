@@ -7,8 +7,8 @@
 
 # Install
 ```shell
-git clone ${this-repo-url.git}
-cd piper-deploy && chmod a+x ./single-node-install.sh
+git clone https://poda.cc:543/rewind/pipra-deploy.git && \
+cd piper-deploy && chmod a+x ./single-node-install.sh && \
 ./single-node-install.sh
 ```
 
@@ -18,9 +18,5 @@ cd piper-deploy && chmod a+x ./single-node-install.sh
 
 # Update
 ```shell
-docker pull piper/piper:v1
-docker pull piper/web:v1
-docker pull piper/chrome:v1
-\\ kill chrome containers if exist
-docker-compose -f single-node.yaml up -d
+chmod a+x ./update.sh && ./update.sh
 ```
