@@ -66,4 +66,6 @@ mkdir -p /etc/docker
 echo '{"registry-mirrors":["https://poda.cc:543"],"log-driver": "json-file", "log-opts": {"max-size": "100m", "max-file": "3"}}' | jq . > /etc/docker/daemon.json
 systemctl restart docker
 
+docker pull piper/piper:v1
+docker pull piper/web:v1
 docker pull piper/chrome:v1
