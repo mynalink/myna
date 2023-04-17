@@ -28,7 +28,7 @@
       <@container.kw>
         <@card.kw>
           <@cardHeader.kw>
-            <@title.kw />
+            <img style="margin:0 auto; height: 4rem" src="${url.resourcesPath}/piper-128.png" />
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
               <@subtitle.kw>
                 <#nested "header">
@@ -60,6 +60,7 @@
           <#if realm.internationalizationEnabled && locale.supported?size gt 1>
             <@locales.kw />
           </#if>
+          <span style="font-size:0.6rem; color:#666;">Ⓒ2021-2023 PIPRA</span>
         </@nav.kw>
       </@container.kw>
     </body>
