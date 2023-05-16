@@ -1,5 +1,5 @@
 {
-  "realm" : "piper",
+  "realm" : "myna",
   "users" : [ {
     "id" : "d4fe9e40-7d81-477d-bc01-3c2561a40064",
     "createdTimestamp" : 1670186995394,
@@ -19,7 +19,7 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "piper.admin", "piper.user", "default-roles-piper" ],
+    "realmRoles" : [ "myna.admin", "myna.user", "default-roles-myna" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -41,23 +41,23 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "piper.user", "default-roles-piper" ],
+    "realmRoles" : [ "myna.user", "default-roles-myna" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
     "id" : "de991d4d-a307-4fa8-8512-96e68df7213d",
     "createdTimestamp" : 1670162555570,
-    "username" : "service-account-piper",
+    "username" : "service-account-myna",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
-    "serviceAccountClientId" : "piper",
+    "serviceAccountClientId" : "myna",
     "credentials" : [ ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "default-roles-piper" ],
+    "realmRoles" : [ "default-roles-myna" ],
     "clientRoles" : {
-      "piper" : [ "uma_protection" ]
+      "myna" : [ "uma_protection" ]
     },
     "notBefore" : 0,
     "groups" : [ ]

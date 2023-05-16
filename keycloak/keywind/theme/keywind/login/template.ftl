@@ -28,7 +28,7 @@
       <@container.kw>
         <@card.kw>
           <@cardHeader.kw>
-            <img style="margin:0 auto; height: 4rem" src="${url.resourcesPath}/piper-128.png" />
+            <img style="margin:0 auto; height: 4rem" src="${url.resourcesPath}/myna-logo-128.png" />
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
               <@subtitle.kw>
                 <#nested "header">

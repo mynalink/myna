@@ -7,15 +7,3 @@ datasources:
     access: proxy
     url: http://prometheus:9090/prometheus
     isDefault: true
-
-  - name: InfluxDB
-    type: influxdb
-    access: proxy
-    url: http://influxdb:8086
-    secureJsonData:
-      token: token
-    jsonData:
-      version: Flux
-      organization: piper
-      defaultBucket: data
-      tlsSkipVerify: true

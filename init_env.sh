@@ -8,7 +8,7 @@ apt-get update
 apt-get install apt-transport-https ca-certificates wget software-properties-common jq curl -qy
 
 ##1##
-echo "Check nofile and vm setting"
+echo "Check nofile / vm setting"
 ##1##
 
 UNAME=$(uname | tr "[:upper:]" "[:lower:]")
@@ -66,6 +66,6 @@ mkdir -p /etc/docker
 echo '{"registry-mirrors":["https://poda.cc:543"],"log-driver": "json-file", "log-opts": {"max-size": "100m", "max-file": "3"}}' | jq . > /etc/docker/daemon.json
 systemctl restart docker
 
-docker pull piper/piper:v1
-docker pull piper/web:v1
-docker pull piper/chrome:v1
+docker pull myna/node:v1
+docker pull myna/web:v1
+docker pull myna/chrome:v1

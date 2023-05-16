@@ -1,0 +1,58 @@
+version: "3"
+services:
+
+  # Server
+  myna-node:
+    image: myna/node:v1
+    container_name: myna-node
+    env_file:
+      - .env
+    hostname: myna
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./db:/opt/myna/db
+      - ./cache:/opt/myna/cache
+    group_add:
+      - 0
+    ports:
+      - 81:81
+    environment:
+      COMPOSE_CONVERT_WINDOWS_PATHS: 1
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  # Front-end
+  myna-web:
+    image: myna/web:v1
+    container_name: myna-web
+    env_file:
+      - .env
+    ports:
+      - 80:80
+    environment:
+      - NGINX_PORT=80
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Node-exporter
+  node-exporter:
+    image: quay.io/prometheus/node-exporter:v1.2.2
+    container_name: node-exporter
+    hostname: myna
+    restart: always
+    volumes:
+      - /:/host:ro
+    command:
+      - --path.rootfs=/host
+    ports:
+      - 9100:9100
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+          gateway: 172.30.0.1
+    name: myna

@@ -2402,7 +2402,7 @@
           "value": "host.docker.internal:81"
         },
         "datasource": null,
-        "definition": "label_values(node_token_count{job=\"piper\"}, instance)",
+        "definition": "label_values(node_token_count{job=\"myna\"}, instance)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -2412,7 +2412,7 @@
         "name": "node",
         "options": [],
         "query": {
-          "query": "label_values(node_token_count{job=\"piper\"}, instance)",
+          "query": "label_values(node_token_count{job=\"myna\"}, instance)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -2620,7 +2620,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Piper",
+  "title": "Myna",
   "uid": "MM3UsuH7z",
   "version": 4
 }

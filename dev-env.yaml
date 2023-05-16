@@ -1,42 +1,18 @@
 version: "3"
 services:
 
-  # Server
-  myna-node:
-    image: myna/node:v1
-    container_name: myna-node
-    env_file:
-      - .env
-    hostname: myna
+  nginx:
+    image: nginx:1.20
+    container_name: nginx
     restart: always
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./db:/opt/myna/db
-      - ./cache:/opt/myna/cache
-    group_add:
-      - '0'
-    ports:
-      - 81:81
-    environment:
-      COMPOSE_CONVERT_WINDOWS_PATHS: 1
-    extra_hosts:
-      - host.docker.internal:host-gateway
-
-
-  # Front-end
-  myna-web:
-    image: myna/web:v1
-    container_name: myna-web
-    volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-    env_file:
-      - .env
     ports:
       - 80:80
     environment:
       - NGINX_PORT=80
     extra_hosts:
-      - host.docker.internal:host-gateway
+      - "host.docker.internal:host-gateway"
 
   # Keycloak
   keycloak:
@@ -52,16 +28,16 @@ services:
     ports:
       - 8080:8080
     environment:
-      - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
-      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=password
       - PROXY_ADDRESS_FORWARDING=true
       - KC_FEATURES=DOCKER,ADMIN_FINE_GRAINED_AUTHZ,TOKEN_EXCHANGE,SCRIPTS
       - KC_PROXY=edge
       - KC_HTTP_RELATIVE_PATH=/auth
       - KC_HOSTNAME_STRICT=false
     command: [
-      "--spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true",
-      "start-dev"
+      --spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true,
+      start-dev
     ]
     entrypoint: [ "/opt/keycloak/bin/kc.sh" ]
 
@@ -74,8 +50,8 @@ services:
       - "9000:9000"
       - "9001:9001"
     environment:
-      MINIO_ROOT_USER: ${S3_ACCESS_KEY}
-      MINIO_ROOT_PASSWORD: ${S3_SECRET_KEY}
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: password
     command: server --console-address :9001 /data
     healthcheck:
       test: ["CMD", "curl", "-f", "http://minio:9000/minio/health/live"]
@@ -95,7 +71,7 @@ services:
       - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
       - ./elasticsearch/plugins:/usr/share/elasticsearch/plugins
     environment:
-      - ELASTIC_PASSWORD=${ES_PASSWORD}
+      - ELASTIC_PASSWORD=password
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
 
   # Kibana
@@ -113,7 +89,7 @@ services:
       - 5601:5601
     environment:
       - ELASTICSEARCH_USERNAME=elastic
-      - ELASTICSEARCH_PASSWORD=${ES_PASSWORD}
+      - ELASTICSEARCH_PASSWORD=password
 
   # Prometheus
   prometheus:
@@ -150,8 +126,8 @@ services:
     environment:
       GF_LIVE_ALLOWED_ORIGINS: "*"
       GF_AUTH_BASIC_ENABLED: 'true'
-      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER}
-      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD}
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: password
       GF_AUTH_ANONYMOUS_ENABLED: 'true'
       GF_SECURITY_ALLOW_EMBEDDING: 'true'
       GF_SERVER_ROOT_URL: '%(protocol)s://%(domain)s:%(http_port)s/grafana/'

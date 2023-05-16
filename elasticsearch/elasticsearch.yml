@@ -1,4 +1,4 @@
-cluster.name: es.piper
+cluster.name: es.myna
 network.host: 0.0.0.0
 node.name: "node-1"
 discovery.seed_hosts: ["127.0.0.1", "[::1]"]
