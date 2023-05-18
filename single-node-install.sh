@@ -12,7 +12,7 @@ echo -e ""
 echo -e "MYNA Install..."
 
 # update system config
-chmod a+x init_env.sh && ./init_env.sh
+chmod a+x init_env.sh && chmod a+x update.sh && ./init_env.sh
 
 chmod -R 777 ./elasticsearch/plugins/
 cd ./elasticsearch/plugins/elasticsearch-analysis-ik-7.14.2 && rm ._*

@@ -72,7 +72,7 @@ services:
       - ./elasticsearch/plugins:/usr/share/elasticsearch/plugins
     environment:
       - ELASTIC_PASSWORD=password
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
 
   # Kibana
   kibana:
