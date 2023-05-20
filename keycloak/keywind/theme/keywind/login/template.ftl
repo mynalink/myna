@@ -60,7 +60,7 @@
           <#if realm.internationalizationEnabled && locale.supported?size gt 1>
             <@locales.kw />
           </#if>
-          <span style="font-size:0.6rem; color:#666;">Ⓒ2021-2023 PIPRA</span>
+          <span style="font-size:0.6rem; color:#666;">Ⓒ2021-2023 myna.link</span>
         </@nav.kw>
       </@container.kw>
     </body>
