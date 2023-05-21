@@ -7,10 +7,9 @@ services:
     restart: always
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/cert:/etc/nginx/cert
     ports:
       - 80:80
-    environment:
-      - NGINX_PORT=80
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
