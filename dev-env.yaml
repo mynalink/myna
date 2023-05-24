@@ -44,6 +44,7 @@ services:
   minio:
     image: minio/minio:RELEASE.2022-08-13T21-54-44Z
     container_name: minio
+    hostname: minio
     restart: always
     ports:
       - "9000:9000"
