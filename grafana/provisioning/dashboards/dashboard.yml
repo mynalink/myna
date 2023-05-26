@@ -5,3 +5,7 @@ providers:
     folder: ''
     options:
       path: /etc/grafana/provisioning/dashboards
+  - name: 'Node'
+    folder: ''
+    options:
+      path: /etc/grafana/provisioning/dashboards
