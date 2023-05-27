@@ -93,7 +93,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(node_token_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(node_token_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -218,7 +218,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(distributor_token_queuing_size{instance=~\"$node\"}[10m])",
+          "expr": "increase(distributor_token_queuing_size{node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "{{name}}",
           "refId": "A"
@@ -345,7 +345,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(agent_token_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(agent_token_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -356,7 +356,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(agent_token_failure_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(agent_token_failure_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -445,14 +445,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(agent_token_success_count{name=~\"$agent_name\",instance=~\"$node\"}[10m])",
+          "expr": "increase(agent_token_success_count{name=~\"$agent_name\",node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "success",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(agent_token_failure_count{name=~\"$agent_name\",instance=~\"$node\"}[10m])",
+          "expr": "increase(agent_token_failure_count{name=~\"$agent_name\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -534,7 +534,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(agent_token_queuing_size{instance=~\"$node\"}[10m])",
+          "expr": "increase(agent_token_queuing_size{node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "{{name}}",
           "refId": "A"
@@ -634,7 +634,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -726,7 +726,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_timeout_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_timeout_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -847,7 +847,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_inbound_bytes{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_inbound_bytes{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -857,7 +857,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(proxy_outbound_bytes{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_outbound_bytes{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -943,14 +943,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_success_count{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_success_count{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "success",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(proxy_banned_count{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_banned_count{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -959,7 +959,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(proxy_timeout_count{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_timeout_count{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -968,7 +968,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(proxy_changeIp_success_count{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_changeIp_success_count{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -977,7 +977,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(proxy_changeIp_failure_count{id=~\"$proxy_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_changeIp_failure_count{id=~\"$proxy_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -1065,7 +1065,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_outbound_bytes{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_outbound_bytes{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1157,7 +1157,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_inbound_bytes{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_inbound_bytes{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1249,7 +1249,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_banned_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_banned_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1341,7 +1341,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(proxy_changeIp_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_changeIp_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1352,7 +1352,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(proxy_changeIp_failure_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(proxy_changeIp_failure_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1487,7 +1487,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(template_token_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(template_token_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1498,7 +1498,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(template_token_failure_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(template_token_failure_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1604,14 +1604,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(template_token_success_count{id=~\"$template_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(template_token_success_count{id=~\"$template_id\",node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "success",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(template_token_failure_count{id=~\"$template_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(template_token_failure_count{id=~\"$template_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -1742,7 +1742,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(task_token_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(task_token_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1753,7 +1753,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(task_token_failure_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(task_token_failure_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1859,14 +1859,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(task_token_success_count{id=~\"$task_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(task_token_success_count{id=~\"$task_id\",node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "success",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(task_token_failure_count{id=~\"$task_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(task_token_failure_count{id=~\"$task_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -1998,7 +1998,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(index_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(index_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -2009,7 +2009,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(index_failure_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(index_failure_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -2115,14 +2115,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(index_success_count{name=~\"$index_name\",instance=~\"$node\"}[10m])",
+          "expr": "increase(index_success_count{name=~\"$index_name\",node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "success",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(index_failure_count{name=~\"$index_name\",instance=~\"$node\"}[10m])",
+          "expr": "increase(index_failure_count{name=~\"$index_name\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -2252,7 +2252,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(account_success_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(account_success_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -2263,7 +2263,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(account_frozen_count{instance=~\"$node\"}[10m])",
+          "expr": "increase(account_frozen_count{node=\"$node\"}[10m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -2369,14 +2369,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(account_success_count{name=~\"$account_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(account_success_count{name=~\"$account_id\",node=\"$node\"}[10m])",
           "interval": "",
           "legendFormat": "success",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(account_frozen_count{name=~\"$account_id\",instance=~\"$node\"}[10m])",
+          "expr": "increase(account_frozen_count{name=~\"$account_id\",node=\"$node\"}[10m])",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -2398,11 +2398,11 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "host.docker.internal:81",
-          "value": "host.docker.internal:81"
+          "text": "826a21227424415fab9900943f5e36d0",
+          "value": "826a21227424415fab9900943f5e36d0"
         },
         "datasource": null,
-        "definition": "label_values(node_token_count{job=\"myna\"}, instance)",
+        "definition": "label_values(node_token_count{job=\"myna\"}, node)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -2412,7 +2412,7 @@
         "name": "node",
         "options": [],
         "query": {
-          "query": "label_values(node_token_count{job=\"myna\"}, instance)",
+          "query": "label_values(node_token_count{job=\"myna\"}, node)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
