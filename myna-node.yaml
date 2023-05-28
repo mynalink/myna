@@ -26,6 +26,8 @@ services:
   myna-web:
     image: myna/web:v1
     container_name: myna-web
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     env_file:
       - .env
     ports:
