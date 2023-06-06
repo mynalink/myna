@@ -13,6 +13,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./db:/opt/myna/db
       - ./cache:/opt/myna/cache
+      - ./log:/opt/myna/log
     group_add:
       - 0
     ports:
