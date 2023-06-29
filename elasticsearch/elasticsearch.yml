@@ -10,3 +10,4 @@ http.cors.allow-headers: Authorization,X-Requested-With,X-Auth-Token,Content-Typ
 http.cors.allow-credentials: true
 xpack.security.enabled: true
 xpack.security.transport.ssl.enabled: true
+reindex.remote.whitelist: 127.0.0.1:9200

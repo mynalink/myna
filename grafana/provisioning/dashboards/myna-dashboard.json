@@ -21,7 +21,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1685548244254,
+  "id": 5,
+  "iteration": 1687758247781,
   "links": [],
   "panels": [
     {
@@ -1532,17 +1533,17 @@
               "tooltip": false,
               "viz": false
             },
-            "lineInterpolation": "linear",
+            "lineInterpolation": "smooth",
             "lineWidth": 1,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
             },
-            "showPoints": "auto",
+            "showPoints": "never",
             "spanNulls": false,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -1600,6 +1601,7 @@
           "mode": "single"
         }
       },
+      "pluginVersion": "8.1.2",
       "targets": [
         {
           "exemplar": true,
@@ -1796,7 +1798,7 @@
             "spanNulls": false,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -2395,8 +2397,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "826a21227424415fab9900943f5e36d0",
-          "value": "826a21227424415fab9900943f5e36d0"
+          "text": "3_w7k4_DTjib8Jr6iiXWag==",
+          "value": "3_w7k4_DTjib8Jr6iiXWag=="
         },
         "datasource": null,
         "definition": "label_values(node_token_count{job=\"myna\"}, node)",
@@ -2476,8 +2478,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "08ee9ad9fbdf59acacdaef955306e708",
-          "value": "08ee9ad9fbdf59acacdaef955306e708"
+          "text": "58738a977bee95714daec4a3ba867b60",
+          "value": "58738a977bee95714daec4a3ba867b60"
         },
         "datasource": null,
         "definition": "label_values(template_token_success_count{}, id)",
@@ -2503,8 +2505,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "0a4bdb42c985f77da6ac761df643ce90",
-          "value": "0a4bdb42c985f77da6ac761df643ce90"
+          "text": "16021df8e6971dc95460348c5f9c8639",
+          "value": "16021df8e6971dc95460348c5f9c8639"
         },
         "datasource": null,
         "definition": "label_values(task_token_success_count{}, id)",
@@ -2585,8 +2587,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "面包财经 文章列表",
-          "value": "面包财经 文章列表"
+          "text": "新京报 财经频道 文章列表",
+          "value": "新京报 财经频道 文章列表"
         },
         "datasource": null,
         "definition": "label_values(template_token_success_count{id=~\"$template_id\"}, name)",
@@ -2611,12 +2613,12 @@
     ]
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Myna",
   "uid": "MM3UsuH7z",
-  "version": 5
+  "version": 2
 }
