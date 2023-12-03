@@ -9,8 +9,8 @@
 
 ## Single Node
 ```shell
-git clone https://poda.cc:543/rewind/myna-depl.git && \
-cd myna-depl && chmod a+x ./single-node-install.sh && \
+git clone https://github.com/mynalink/myna && \
+cd myna && chmod a+x ./single-node-install.sh && \
 ./single-node-install.sh
 ```
 
