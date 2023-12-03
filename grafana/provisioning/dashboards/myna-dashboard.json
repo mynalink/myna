@@ -2587,8 +2587,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "新京报 财经频道 文章列表",
-          "value": "新京报 财经频道 文章列表"
+          "text": "Article List",
+          "value": "Article List"
         },
         "datasource": null,
         "definition": "label_values(template_token_success_count{id=~\"$template_id\"}, name)",

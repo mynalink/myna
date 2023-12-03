@@ -66,6 +66,5 @@ mkdir -p /etc/docker
 echo '{"registry-mirrors":["https://poda.cc:543"],"log-driver": "json-file", "log-opts": {"max-size": "100m", "max-file": "3"}}' | jq . > /etc/docker/daemon.json
 systemctl restart docker
 
-docker pull myna/node:v1
-docker pull myna/web:v1
-docker pull myna/chrome:v1
+docker pull mynalink/node:v1
+docker pull mynalink/chrome:v1

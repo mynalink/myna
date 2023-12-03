@@ -15,7 +15,7 @@ services:
       - ./cache:/opt/myna/cache
       - ./log:/opt/myna/log
     group_add:
-      - 0
+      - "0"
     ports:
       - 80:80
       - 81:81
@@ -23,25 +23,3 @@ services:
       COMPOSE_CONVERT_WINDOWS_PATHS: 1
     extra_hosts:
       - host.docker.internal:host-gateway
-
-  # Node-exporter
-  node-exporter:
-    image: quay.io/prometheus/node-exporter:v1.2.2
-    container_name: node-exporter
-    hostname: myna
-    restart: always
-    volumes:
-      - /:/host:ro
-    command:
-      - --path.rootfs=/host
-    ports:
-      - 9100:9100
-
-networks:
-  default:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.30.0.0/16
-          gateway: 172.30.0.1
-    name: myna

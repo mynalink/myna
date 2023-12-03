@@ -16,19 +16,20 @@ cd myna-depl && chmod a+x ./single-node-install.sh && \
 
 ## Dev Env
 ```shell
+# Windows
 ./dev-env-init.bat
-OR
+# Linux
 ./dev-env-init.sh
 ```
 
-## Cluster
-1. 前提条件
-   - 部署 Keycloak 提供统一认证服务
-   - 部署 Elasticsearch / Kibana 提供文档索引服务
-   - 部署 Ceph 或 MinIO 提供对象存储服务
-   - 部署 Prometheus / Grafana 提供监控服务
-2. 修改`.env`，更新配置变量
-3. 执行部署脚本
+## Cluster deployment
+1. Prerequisites
+   - Keycloak: unified identity authentication service
+   - Elasticsearch/Kibana: document indexing and search
+   - Ceph / MinIO: object storage service
+   - Prometheus/Grafana: monitoring tool
+2. modify `.env`, update env variables
+3. Execute script
    ```shell
    docker-compose -f myna-node.yaml up -d
    ```
